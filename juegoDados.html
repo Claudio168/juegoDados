@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<button onclick="nuevaPartida()">Preciona para tirar el dado </button>
+<hr>
+<a href="">Nueva partida</a>
+
+
+<h1 id="jugador"></h1>
+<h1 id="maquina"></h1>
+<h1 id="ganador"></h1>
+
+
+    <script>
+
+        var jugador = 0;
+        var maquina = 0;
+        
+        function nuevaPartida(){
+            jugador = Math.floor(Math.random()*6)+1;
+            document.getElementById('jugador').innerHTML="Jugador: "+jugador;
+
+            maquina =  Math.floor(Math.random()*6)+1;
+            document.getElementById('maquina').innerHTML="Máquina: "+maquina;
+
+            if(jugador > maquina){
+
+                document.getElementById('ganador').innerHTML="¡Ganaste! 😁";
+
+            }else if(maquina > jugador){
+
+                document.getElementById('ganador').innerHTML="El gandor es La Máquina 😫";
+
+            }else{
+                
+                document.getElementById('ganador').innerHTML="Empate 😑";
+            }
+        }
+
+        
+
+       
+
+
+    </script>
+    
+</body>
+</html>
